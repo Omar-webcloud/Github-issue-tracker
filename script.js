@@ -162,7 +162,7 @@ function renderCards(UI) {
                 <div class="flex items-center justify-between pt-4 border-t border-gray-50 mt-auto">
                     <div class="flex items-center gap-2">
                         <div class="avatar placeholder">
-                            <div class="bg-indigo-100 text-indigo-600 rounded-full w-6 h-6">
+                            <div class="bg-indigo-100 text-indigo-600 rounded-full w-6 h-6 flex items-center justify-center">
                                 <span class="text-[10px] font-bold">${issue.author.charAt(0).toUpperCase()}</span>
                             </div>
                         </div>
@@ -206,7 +206,7 @@ async function showDetails(id) {
                     <p class="text-gray-700 leading-relaxed text-lg">${issue.description}</p>
                 </div>
 
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-4 mb-8">
                     <div class="bg-white p-4 rounded-xl border border-gray-100">
                         <p class="text-xs font-bold text-gray-400 uppercase mb-1">Assignee</p>
                         <p class="font-bold text-gray-800">${issue.author}</p>
@@ -215,6 +215,10 @@ async function showDetails(id) {
                         <p class="text-xs font-bold text-gray-400 uppercase mb-1">Priority</p>
                         <span class="badge badge-error text-white font-bold">${issue.priority}</span>
                     </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
+                    <p class="text-center text-gray-400 font-bold text-lg">No Comments</p>
                 </div>
             </div>
         `;
