@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- tailwind & daisyUI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Issue Tracker</title>
+</head>
+<body class="bg-gray-50 min-h-screen font-sans">
+    <div id="login-screen" class="flex flex-col items-center justify-center min-h-screen p-4">
+        <div class="card w-full max-w-md bg-white shadow-xl p-8 border border-gray-100 rounded-2xl">
+            <div class="flex flex-col items-center mb-10">
+                <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="w-20 h-20 mb-6 opacity-90 drop-shadow-sm">
+                <h1 class="text-3xl font-bold text-gray-800 tracking-tight">GitHub Issues Tracker</h1>
+                <p class="text-gray-500 mt-2 font-medium">Sign in to manage your issues</p>
+            </div>
+
+            <form id="login-form" class="space-y-6">
+                <div class="form-control">
+                    <label class="label pb-1">
+                        <span class="label-text font-bold text-gray-700">Username</span>
+                    </label>
+                    <input type="text" id="username" placeholder="Enter Username" class="input input-bordered w-full focus:input-primary transition-all duration-200 h-12 bg-gray-50 border-gray-200" required />
+                    <label class="label pt-1">
+                        <span class="label-text-alt text-indigo-600 font-bold">Default: admin</span>
+                    </label>
+                </div>
+
+                <div class="form-control">
+                    <label class="label pb-1">
+                        <span class="label-text font-bold text-gray-700">Password</span>
+                    </label>
+                    <input type="password" id="password" placeholder="Enter Password" class="input input-bordered w-full focus:input-primary transition-all duration-200 h-12 bg-gray-50 border-gray-200" required />
+                    <label class="label pt-1">
+                        <span class="label-text-alt text-indigo-600 font-bold">Default: admin123</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full text-lg normal-case font-bold h-14 bg-indigo-600 border-none hover:bg-indigo-700 shadow-md transition-all duration-200">Sign In</button>
+            </form>
+
+            <div class="divider my-10 text-gray-400 font-bold text-xs uppercase tracking-widest">OR</div>
+
+            <div class="bg-blue-50/50 rounded-2xl p-6 text-center border border-blue-100 flex flex-col items-center">
+                <p class="text-gray-500 mb-4 text-xs font-bold uppercase tracking-wider">Demo Credentials:</p>
+                <div class="space-y-2">
+                    <p class="font-bold text-gray-800 text-sm">Username: <span class="font-medium text-indigo-600">admin</span></p>
+                    <p class="font-bold text-gray-800 text-sm">Password: <span class="font-medium text-indigo-600">admin123</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
