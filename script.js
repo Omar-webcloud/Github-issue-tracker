@@ -150,7 +150,10 @@ function renderCards(UI) {
             <div class="card-body p-5">
                 <div class="flex justify-between items-start mb-2">
                     <span class="badge badge-ghost badge-sm font-bold uppercase tracking-wider opacity-60">${issue.priority || "NORMAL"}</span>
-                    <span class="text-xs font-semibold text-gray-400">#${issue.id}</span>
+                    <div class="flex items-center gap-2">
+                        <img src="assets/${issue.status.toLowerCase() === "open" ? "Open-Status.png" : "Closed- Status .png"}" class="w-3 h-3 object-contain" alt="${issue.status}">
+                        <span class="text-xs font-semibold text-gray-400">#${issue.id}</span>
+                    </div>
                 </div>
                 <h3 class="card-title text-base font-bold text-gray-800 leading-tight mb-2 truncate-2-lines">${issue.title}</h3>
                 <p class="text-sm text-gray-500 line-clamp-2 mb-4 h-10">${issue.description}</p>
@@ -193,7 +196,10 @@ async function showDetails(id) {
     UI.modalContent.innerHTML = `
             <div class="p-8">
                 <div class="flex items-center gap-3 mb-6">
-                    <span class="badge ${issue.status.toLowerCase() === "open" ? "badge-success" : "badge-primary"} badge-md text-white font-bold px-4 py-3">${issue.status}</span>
+                    <span class="badge ${issue.status.toLowerCase() === "open" ? "badge-success" : "badge-primary"} badge-md text-white font-bold px-4 py-3 flex gap-2 items-center">
+                        <img src="assets/${issue.status.toLowerCase() === "open" ? "Open-Status.png" : "Closed- Status .png"}" class="w-4 h-4 object-contain brightness-0 invert" alt="${issue.status}">
+                        ${issue.status}
+                    </span>
                     <span class="text-gray-400 font-medium">Opened by ${issue.author} • ${new Date(issue.createdAt).toLocaleDateString()}</span>
                 </div>
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">${issue.title}</h2>
