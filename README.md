@@ -1,15 +1,9 @@
 # Github-issue-tracker
-PH B12 A5
 
 
 
 
 
-
-
-
-
-
-
+## Credentials 
 - Username: admin
 - Password: admin123
